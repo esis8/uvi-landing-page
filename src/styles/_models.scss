@@ -9,12 +9,31 @@
     width: 200px;
     height: 40px;
     border-radius: 10px;
-    font-weight: $font-weight-semibold;
+    font-weight: $font-weight-bold;
     cursor: pointer;
     &:hover{
         background: $secondary-alter-color;
         color: #FFFFFF;
     }
+}
+
+@mixin popup{
+  position: fixed;
+  z-index: 10;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(2px);
+  .popUp{
+    position: sticky;
+    padding: 24px 50px;
+    top: 100px;
+    left: calc((100vw - 800px) /2);
+    width: 800px;
+    border-radius: 20px;
+    background-color: $color-popup;
+  }
 }
 
 $primary-color: #470083;
@@ -23,10 +42,9 @@ $primary-alter-color: #04FB04;
 $secondary-alter-color: #018301;
 $color-light: #BD72FD;
 $color-dark: #3D2335;
+$color-alter: #4c1e7a;
 $form-text-color: #9ea0a4;
-
-$primary-font: #3D2335;
-$secundary-font: #BD72FD;
+$color-popup: #5c5494;
 
 $font-weight-light: 300;
 $font-weight-regular: 400;

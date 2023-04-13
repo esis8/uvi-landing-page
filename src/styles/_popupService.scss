@@ -1,0 +1,34 @@
+@use './models' as model;
+
+.popup__Service{
+    @include model.popup();
+    i.bi-x{
+        position: absolute;
+        right: 20px;
+        top: 10px;
+        font-size: 30px;
+        color: model.$primary-alter-color;
+        cursor: pointer;
+    }
+    .content__popup{
+        display: flex;
+        flex-direction: column;
+        h3{
+            font-size: 44px;
+            font-weight: model.$font-weight-bold;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        p{
+            font-weight: model.$font-weight-semibold;
+            margin-bottom: 20px;
+        }
+        button{
+            @include model.btn();
+            width: 100px;
+            align-self: flex-end;
+            height: 25px;
+            font-size: 14px;
+        }
+    }
+}

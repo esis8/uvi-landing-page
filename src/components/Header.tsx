@@ -17,7 +17,7 @@ const Header = () => {
             <ul>
                 <Link href='/'> <li>Inicio</li></Link>
                 <Link href='/about'><li>Sobre UVI</li></Link>
-                <li>Servicios</li>
+                <Link href='/#services' scroll={true}><li>Servicios</li></Link>
                 <li>Planes</li>
                 <li>Contacto</li>
             </ul>

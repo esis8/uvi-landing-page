@@ -11,7 +11,7 @@ export default function About() {
             <main className='about__page'>
                 <Image src='/img/background_2.jpg' alt='background' width={1536} height={512} priority/>
                 <div className='about__title'>
-                    <h2>Por qué elegir los servicios de UVI</h2>
+                    <h2>Por qué elegir nuestros servicios!</h2>
                 </div>
 
                 <section className='about__section'>

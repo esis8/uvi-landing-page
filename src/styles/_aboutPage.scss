@@ -13,7 +13,10 @@ main.about__page{
     .about__title{
         margin-top: -150px;
         width: 700px;
-        background: model.$primary-color;
+        background: model.$color-alter;
+        box-shadow: 10px 10px 5px 0px #3D2335DD;
+        -webkit-box-shadow: 10px 10px 5px 0px #3D2335DD;
+        -moz-box-shadow: 10px 10px 5px 0px #3D2335DD;
         padding: 24px 50px;
         border-radius: 20px;
         h2{
@@ -24,6 +27,7 @@ main.about__page{
         }
     }
     .about__section{
+        margin-top: 30px;
         width: 70%;
         li{
             h3{
