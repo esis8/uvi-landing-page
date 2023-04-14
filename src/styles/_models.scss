@@ -19,7 +19,7 @@
 
 @mixin popup{
   position: fixed;
-  z-index: 10;
+  z-index: 20;
   height: 100%;
   width: 100%;
   top: 0;
@@ -32,7 +32,18 @@
     left: calc((100vw - 800px) /2);
     width: 800px;
     border-radius: 20px;
-    background-color: $color-popup;
+    background-color: $color-popup-background;
+    @media (max-width: 1000px){
+      width: 90%;
+      left: calc((100vw - 90%) /2);
+    }
+    @media (max-width: 600px){
+      width: 100%;
+      border-radius: 0;
+      top: 0;
+      height: 100vh;
+      padding: 30px 20px 10px 20px;
+    }
   }
 }
 
@@ -45,6 +56,8 @@ $color-dark: #3D2335;
 $color-alter: #4c1e7a;
 $form-text-color: #9ea0a4;
 $color-popup: #5c5494;
+$color-background: #4c1e7add;
+$color-popup-background: #5c5494dd;
 
 $font-weight-light: 300;
 $font-weight-regular: 400;
@@ -73,10 +86,60 @@ $font-family-general: 'Open Sans', sans-serif;
     font-family: $font-family-general;
   }
 
+/* START SCROLLBAR */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: $color-dark;
+  border-radius: 10px;
+}
+
+body.dark ::-webkit-scrollbar-track{
+    background: $color-popup;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00000060;
+  border-radius: 10px;
+}
+
+body.dark ::-webkit-scrollbar-thumb {
+    background: #FFFFFF80;
+  }
+
+
+body {
+  scrollbar-width: thin;
+}
+
+/* body::-webkit-scrollbar {
+  display: none;
+}
+ */
+body::-webkit-scrollbar-track {
+    background: $primary-color;
+    border-radius: 10px;
+}
+
+body.dark body::-webkit-scrollbar-track{
+    background: $color-dark;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: $color-dark;
+  border-radius: 10px;
+}
+
+
+/* END SCROLLBAR */
+
   body{
     background: $primary-color;
     width: 100%;
-    @media (min-width: 2000px) and (orientation: landscape){
+    @media (min-width: 2000px){
 
       width: 2000px;
       margin-left: calc((100vw - 2000px)/2);

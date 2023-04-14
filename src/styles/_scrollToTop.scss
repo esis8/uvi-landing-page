@@ -1,0 +1,14 @@
+@use './models' as model;
+
+.scroll__top{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 10;
+    cursor: pointer;
+    background-color: model.$secondary-color;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+}

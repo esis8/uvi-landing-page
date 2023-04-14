@@ -9,6 +9,11 @@
         font-size: 30px;
         color: model.$primary-alter-color;
         cursor: pointer;
+        @media (max-width: 600px){
+            right: 5px;
+            top: 5px;
+            font-size: 25px;
+        }
     }
     .content__popup{
         display: flex;
@@ -29,6 +34,17 @@
             align-self: flex-end;
             height: 25px;
             font-size: 14px;
+        }
+        @media (max-width: 600px){
+            h3{
+                font-size: 18px;
+                margin-bottom: 14px;
+            }
+            p{
+                font-size: 14px;
+                margin-bottom: 14px;
+                line-height: 14px;
+            }
         }
     }
 }

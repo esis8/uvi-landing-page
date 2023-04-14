@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -7,13 +7,25 @@ import { RootState } from '@/types/types'
 import { SetServiceAction, SetPopupServiceAction } from '@/redux/action'
 import { dataService } from '@/data/data'
 import PopupService from '@/components/PopupService';
-
+import ScrollToTop from '@/components/ScrollToTop';
 
 
 
 export default function Home() {
 
+const [isMobile, setIsMobile] = useState(false);
 
+useEffect(()=>{
+  const handleResize = () => {
+    if (typeof window !== 'undefined'){
+      const screenWidth = window.innerWidth;
+      setIsMobile(screenWidth<1000);
+    }
+  };
+  handleResize();
+  window.addEventListener('resize', handleResize);
+  return () => window.removeEventListener('resize', handleResize);
+}, [isMobile])
 
 function handleClickService(){
   dispatch(SetPopupServiceAction(!popupService))
@@ -23,7 +35,6 @@ const dispatch = useDispatch();
 
 
 const popupService = useSelector((state: RootState)=>state.popupService)
-
 
   return (
     <>
@@ -42,7 +53,11 @@ const popupService = useSelector((state: RootState)=>state.popupService)
       </Head>
       <main className='main__home'>
         <div className='portrait'>
-          <Image src='/img/background_1.jpg' alt='background' width={1536} height={512} priority/>
+          {isMobile ?
+           <Image src='/img/background_3.jpg' alt='background' width={1024} height={1024}/>  : 
+          <Image src='/img/background_1.jpg' alt='background' width={1536} height={512}/> 
+          }
+          
           <div className='main__title'>
             <h1>Destaca en el mercado con nuestros servicios</h1>
             <div className='article'>
@@ -77,7 +92,7 @@ const popupService = useSelector((state: RootState)=>state.popupService)
 
         </section>
 
-
+      <ScrollToTop/>
 
       </main>
     </>

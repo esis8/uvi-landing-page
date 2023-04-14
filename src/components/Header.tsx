@@ -1,11 +1,47 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import routes from "@/routes/route";
 
 const Header = () => {
 
+    const [openMenu, setOpenMenu] = useState(false);
+    const [display, setDisplay] = useState(false);
 
+    const handleClickMenu = () =>{
+        if(display){
+            setOpenMenu(!openMenu)
+            setTimeout(()=>{
+                setDisplay(false)
+            },500);
+        }else{
+            setDisplay(true)
+            setTimeout(()=>{
+                setOpenMenu(!openMenu)
+            },50);
+        }
+       
+    }
+
+    const handleClickLinkMenu = ()=>{
+        setOpenMenu(false)
+        setTimeout(()=>{
+            setDisplay(false)
+        },500);
+    }
+
+/*     useEffect(()=>{
+
+        if(openMenu){
+
+        }
+
+        setTimeout(()=>{
+        setIsMenuOpen(!isMenuOpen);
+        rotate.classList.remove("rotate")
+        },500);
+
+      }, [openMenu]) */
 
 
   return (
@@ -14,13 +50,22 @@ const Header = () => {
             <Image src='/img/logo2.png' alt='logo' width={50} height={50} priority></Image>
         </Link>
         <nav className="nav__header">
-            <ul>
-                <Link href='/'> <li>Inicio</li></Link>
-                <Link href='/about'><li>Sobre UVI</li></Link>
-                <Link href='/#services' scroll={true}><li>Servicios</li></Link>
+
+            <ul className={`${openMenu ? 'open' : ''} ${display ? '' : 'display'}`}>
+                <Link href='/' onClick={handleClickLinkMenu}> <li>Inicio</li></Link>
+                <Link href='/about' onClick={handleClickLinkMenu}><li>Sobre UVI</li></Link>
+                <Link href='/#services' onClick={handleClickLinkMenu}><li >Servicios</li></Link>
                 <li>Planes</li>
                 <li>Contacto</li>
             </ul>
+
+            <div id="menu" onClick={handleClickMenu}>
+                <button className={`button__menu  ${openMenu ? 'open' : ''}`} >
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </button>
+            </div>
         </nav>
     </header>);
 };

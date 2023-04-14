@@ -1,7 +1,25 @@
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image'
 import Head from 'next/head'
+import ScrollToTop from '@/components/ScrollToTop'
 
 export default function About() {
+
+
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(()=>{
+      const handleResize = () => {
+        if (typeof window !== 'undefined'){
+          const screenWidth = window.innerWidth;
+          setIsMobile(screenWidth<1000);
+        }
+      };
+      handleResize();
+      window.addEventListener('resize', handleResize);
+      return () => window.removeEventListener('resize', handleResize);
+    }, [isMobile])
+
 
     return (
         <>
@@ -9,7 +27,10 @@ export default function About() {
                 <title>UVI | Sobre UVI</title>
             </Head>
             <main className='about__page'>
-                <Image src='/img/background_2.jpg' alt='background' width={1536} height={512} priority/>
+                {isMobile ?
+                <Image src='/img/background_4.jpg' alt='background' width={1024} height={1024}/>  : 
+                <Image src='/img/background_2.jpg' alt='background' width={1536} height={512}/> 
+                }
                 <div className='about__title'>
                     <h2>Por qué elegir nuestros servicios!</h2>
                 </div>
@@ -44,7 +65,7 @@ export default function About() {
                 </section>
 
 
-
+                <ScrollToTop />
             </main>
         </>
     )
