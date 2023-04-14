@@ -1,0 +1,101 @@
+@use './models' as model;
+
+$width-img-land: 100%;
+$width-img-port: calc(100vh - 100px);
+
+main.planes__page{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img{
+        width: $width-img-land;
+        height: auto;
+    }
+    .planes__title{
+        margin-top: -150px;
+        width: 700px;
+        background: model.$color-background;
+        box-shadow: 10px 10px 5px 0px #3D2335DD;
+        -webkit-box-shadow: 10px 10px 5px 0px #3D2335DD;
+        -moz-box-shadow: 10px 10px 5px 0px #3D2335DD;
+        padding: 24px 50px;
+        border-radius: 20px;
+        h2{
+            font-size: 44px;
+            font-weight: model.$font-weight-bold;
+            text-align: center;
+        }
+    }
+    .planes__section{
+        margin-top: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+        width: 70%;
+        gap: 50px;
+        .plan_card{
+            width: 280px;
+            border-radius: 10px;
+            background: model.$color-alter;
+            padding: 24px;
+            box-shadow: 10px 10px 5px 0px #3D2335DD;
+            -webkit-box-shadow: 10px 10px 5px 0px #3D2335DD;
+            -moz-box-shadow: 10px 10px 5px 0px #3D2335DD;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            &:hover{
+                scale: 1.05;
+            }
+            h2{
+                font-size: 18px;
+                text-align: center;
+                font-weight: model.$font-weight-bold;
+                margin-bottom: 16px;
+            }
+            p{
+                text-align: center;
+                margin-bottom: 20px;
+                &.price_plan{
+                    color: model.$primary-alter-color;
+                }
+            }
+        }
+    }
+    @media (max-width: 1000px){
+        min-height: calc(100vh - 100px);
+        position: relative;
+        img{
+            position: absolute;
+            width: $width-img-land;
+            max-width: $width-img-port;
+            max-height: $width-img-port;
+        }
+        .planes__title{
+            margin-top: calc(100vh - 280px);
+            z-index: 2;
+            width: 90%;
+            h2{
+                font-size: 32px;
+            }
+        }
+        .planes__section{
+            margin-top: 100px;
+            width: 650px;
+        }
+    }
+    @media (max-width: 600px){
+        .planes__title{
+            padding: 20px 20px;
+            h2{
+                font-size: 18px;
+            }
+        }
+        .planes__section{
+            width: 80%;
+        }
+    }
+
+}

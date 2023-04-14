@@ -7,6 +7,7 @@ import NotFound from './NotFound'
 import { Provider } from 'react-redux'
 import store from '@/redux/store'
 import 'bootstrap-icons/font/bootstrap-icons.css';
+import Footer from '@/components/Footer'
 
 
 
@@ -20,6 +21,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <Provider store={store}>
       <Header />
       <ComponentToRender {...pageProps} />
+      <Footer />
     </Provider>
   )
   

@@ -1,6 +1,7 @@
 import { NextPage } from "next";
 import Home from "@/pages";
 import About from "@/pages/about";
+import Planes from "@/pages/planes";
 
 type Route = {
     path: string;
@@ -15,6 +16,10 @@ const routes: Route[]=[
     {
         path: '/about',
         component: About,
+    },
+    {
+        path: '/planes',
+        component: Planes,
     },
 ];
 

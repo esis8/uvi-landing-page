@@ -43,7 +43,7 @@ const Header = () => {
                 <Link href='/' onClick={handleClickLinkMenu}> <li>Inicio</li></Link>
                 <Link href='/about' onClick={handleClickLinkMenu}><li>Sobre UVI</li></Link>
                 <Link href='/#services' onClick={handleClickLinkMenu}><li >Servicios</li></Link>
-                <li>Planes</li>
+                <Link href='/planes' onClick={handleClickLinkMenu}><li>Planes</li></Link>
                 <li>Contacto</li>
             </ul>
 

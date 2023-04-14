@@ -1,7 +1,7 @@
 export const dataService = [
     {
     idService: '1',
-    title: 'CV Personalizados',
+    title: '1. CV Personalizados',
     descriptionCard: 'Ofrecemos CV personalizado que te hará destacar entre los demás. Mejorando tus posibilidades de conseguir el trabajo que deseas.',
     descriptionLong1: 'Crear un currículum vitae puede ser una tarea abrumadora, y muchas veces, las personas no saben por dónde empezar o cómo destacar en un mar de solicitudes. Nuestro servicio de creación de CV personalizados está diseñado para ayudarte a destacar entre la multitud, presentando tus fortalezas y habilidades de manera efectiva.',
     descriptionLong2: 'Nuestros profesionales en CV analizarán tu experiencia laboral y educativa, tus logros y tus objetivos profesionales para crear un currículum que realmente te represente. Trabajaremos contigo para identificar aquellos aspectos que te han llevado a sobresalir en tu carrera y asegurarnos de que esos puntos fuertes estén presentes en tu CV. Refinaremos tu enfoque para presentarte como el candidato ideal para el trabajo al que estás solicitando.',
@@ -9,7 +9,7 @@ export const dataService = [
   }, 
   {
     idService: '2',
-    title: 'Optimización De LinkedIn',
+    title: '2. Optimización De LinkedIn',
     descriptionCard: 'Optimiza tu perfil de LinkedIn con nuestros servicios. Mayor visibilidad en la red y aumentar tus posibilidades de ser contactado por empresas.',
     descriptionLong1: 'Optimizar tu perfil de LinkedIn es fundamental para destacar en el mundo profesional y conseguir nuevas oportunidades laborales. Nuestro servicio de optimización de perfiles de LinkedIn está diseñado para ayudarte a destacar entre la multitud, presentando tus habilidades y logros de manera efectiva.',
     descriptionLong2: 'Nuestros profesionales en LinkedIn analizarán tu perfil para identificar áreas donde puedes mejorar, y trabajaremos contigo para mejorar tu resumen, experiencia laboral y habilidades. Además, nos aseguraremos de que las palabras clave correctas estén presentes en tu perfil para que seas fácilmente descubierto por los reclutadores.',
@@ -17,7 +17,7 @@ export const dataService = [
   }, 
   {
     idService: '3',
-    title: 'Entrenamiento En Entrevistas',
+    title: '3. Entrenamiento En Entrevistas',
     descriptionCard: 'Prepara el éxito con simulacros de entrevista y tips de expertos. Te entrenamos para sentirte seguro y responder de manera efectiva.',
     descriptionLong1: 'Para muchas personas, las entrevistas pueden ser un proceso de alta ansiedad, especialmente si no tienen mucha experiencia en navegarlas con éxito. Es por eso que ofrecemos servicios de entrenamiento en entrevistas para ayudar a nuestros clientes a sentirse más preparados y confiados en la sala de entrevistas.',
     descriptionLong2: 'Nuestro enfoque de entrenamiento en entrevistas se personaliza para satisfacer las necesidades de cada cliente. Trabajamos contigo para entender tus fortalezas y debilidades, y ofrecemos ejercicios específicos para ayudarte a perfeccionar tus habilidades de comunicación, tanto verbal como no verbal. Además de la preparación específica para la entrevista, ofrecemos consejos y técnicas probadas que son útiles en cualquier situación de entrevista, incluyendo cómo hacer preguntas poderosas y cómo responder a preguntas difíciles.',
@@ -25,7 +25,7 @@ export const dataService = [
   }, 
   {
     idService: '4',
-    title: 'Guía De Búsqueda De Empleo',
+    title: '4. Guía De Búsqueda De Empleo',
     descriptionCard: 'Encuentra mejores oportunidades con nuestra guía de empleo: busca en línea, crea cartas de presentación, tips de entrevista.',
     descriptionLong1: 'La búsqueda de empleo puede ser una tarea difícil y agotadora para muchas personas, especialmente si no saben por dónde empezar. Nuestra Guía de Búsqueda de Empleo es una herramienta útil que te proporcionará consejos y estrategias para ayudarte a encontrar el trabajo ideal. Con nuestra guía, aprenderás a crear un currículum y una carta de presentación efectivos, a construir una red de contactos apropiada y a utilizar recursos en línea para buscar trabajos.',
     descriptionLong2: 'Nuestra Guía de Búsqueda de Empleo también incluye información sobre cómo prepararse para una entrevista, cómo investigar sobre la empresa, cómo vestirse apropiadamente y cómo responder preguntas de manera efectiva. Te proporcionamos ejemplos de preguntas comunes de entrevistas y consejos sobre cómo responderlas. Además, te enseñamos cómo destacar tus habilidades, capacitación y experiencia de manera que resalte tus fortalezas.',
@@ -33,7 +33,7 @@ export const dataService = [
   }, 
   {
     idService: '5',
-    title: 'Networking Con Otros Profesionales',
+    title: '5. Networking Con Otros Profesionales',
     descriptionCard: 'Aprovecha nuestra experiencia en tu campo laboral. Ofrecemos asesoría especializada para estar al tanto de las tendencias y adaptarte al mercado.',
     descriptionLong1: 'El networking es una parte importante de la búsqueda de empleo y el desarrollo profesional. Conectar con otros profesionales también puede ser útil para obtener información sobre oportunidades de trabajo, expandir tu conocimiento y establecer relaciones duraderas con personas en tu campo de trabajo. En este sentido, nuestra Guía de Búsqueda de Empleo incluye consejos prácticos para construir una red de contactos eficaz.',
     descriptionLong2: 'Nuestra guía te enseña a definir tus objetivos y establecer un plan de acción para conectarte con otros profesionales. Esto implica identificar a las personas adecuadas para conocer, decidir tanto el medio como el momento adecuados para darles alcance, y desarrollar una estrategia para mantener una comunicación efectiva y constante con ellos.',
@@ -41,7 +41,7 @@ export const dataService = [
   }, 
   {
     idService: '6',
-    title: 'Asesoría Especializada En Tu Campo',
+    title: '6. Asesoría Especializada En Tu Campo',
     descriptionCard: 'Asesoría especializada en tu área de trabajo. Adaptar tu enfoque a las necesidades actuales de tu sector. Maximiza tus oportunidades de éxito.',
     descriptionLong1: 'Encontrar un trabajo en tu campo puede ser un proceso complicado y abrumador. Afortunadamente, hay muchas maneras de obtener ayuda y orientación durante este proceso. Una de estas formas es a través de una asesoría especializada en tu campo. ',
     descriptionLong2: 'Una asesoría especializada en tu campo puede brindarte información y orientación específica sobre cómo construir una red de contactos efectiva, cómo buscar oportunidades de trabajo y cómo mejorar tus habilidades profesionales. Además, los asesores especializados en tu campo podrán brindarte consejos exclusivos y útiles que pueden ayudarte en tu búsqueda de empleo.',
