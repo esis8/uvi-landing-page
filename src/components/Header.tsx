@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import routes from "@/routes/route";
+
 
 const Header = () => {
 
@@ -30,18 +30,6 @@ const Header = () => {
         },500);
     }
 
-/*     useEffect(()=>{
-
-        if(openMenu){
-
-        }
-
-        setTimeout(()=>{
-        setIsMenuOpen(!isMenuOpen);
-        rotate.classList.remove("rotate")
-        },500);
-
-      }, [openMenu]) */
 
 
   return (

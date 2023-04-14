@@ -4,6 +4,7 @@ $width-img-land: 100%;
 $width-img-port: calc(100vh - 100px);
 
 main.about__page{
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -71,6 +72,11 @@ main.about__page{
         }
         .about__section{
             width: 80%;
+            li{
+                h3, p{
+                    text-align: center;
+                }
+            }
         }
     }
 }
