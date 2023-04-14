@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image'
 import Head from 'next/head'
 import ScrollToTop from '@/components/ScrollToTop'
+import FormService from '@/components/formService';
 
 export default function About() {
 
@@ -64,7 +65,7 @@ export default function About() {
                     </ol>
                 </section>
 
-
+                <FormService />
                 <ScrollToTop />
             </main>
         </>

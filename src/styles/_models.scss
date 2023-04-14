@@ -47,6 +47,28 @@
   }
 }
 
+@mixin input{
+  padding-left: 20px;
+  margin: 20px 20px;
+  height: 40px;
+  font-size: 14px;
+  font-weight: $font-weight-semibold;
+  color: $color-dark;
+  border-radius: 5px;
+  border: 1px $form-text-color solid;
+  outline: none;
+  &::placeholder{
+      font-size: 14px;
+      color: $form-text-color;
+  }
+  @media (max-width: 600px){
+    margin: 20px 10px;
+    width: 260px;
+  }
+}
+
+
+
 $primary-color: #470083;
 $secondary-color: #7721BF;
 $primary-alter-color: #04FB04;
@@ -115,10 +137,10 @@ body {
   scrollbar-width: thin;
 }
 
-/* body::-webkit-scrollbar {
+body::-webkit-scrollbar {
   display: none;
 }
- */
+
 body::-webkit-scrollbar-track {
     background: $primary-color;
     border-radius: 10px;

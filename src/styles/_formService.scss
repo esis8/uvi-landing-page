@@ -1,0 +1,99 @@
+@use './models' as model;
+
+.form__service{
+    background: model.$secondary-color;
+    width: 100%;
+    padding: 24px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h2{
+        font-size: 36px;
+        font-weight: model.$font-weight-bold;
+        margin-bottom: 20px;
+        text-align: center;
+
+    }
+    form{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        width: 650px;
+        .form__item{
+            width: 50%;
+            input{
+                @include model.input();
+                width: 80%;
+            }
+            &.input-file{
+                .mask{
+                    position: relative;
+                    .false_button{
+                        position: absolute;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 80%;
+                        left: 20px;
+                        text-align: center;
+                        top: 20px;
+                        z-index: 0;
+                        background: #FFFFFF;
+                        color: model.$color-dark;
+                        height: 40px;
+                        border-radius: 5px;
+                    }
+                }
+                input[type="file"]{
+                    opacity: 0;
+                    z-index: 2;
+                    cursor: pointer;
+                }
+            }select{
+                @include model.input();
+                width: 80%;
+                option{
+                    background: model.$color-alter;
+                }
+                &:hover{
+                    background: model.$primary-alter-color;
+                }
+            }
+        }
+        button{
+            @include model.btn();
+            width: 100px;
+            height: 30px;
+            margin: 40px 0;
+        }
+
+
+    }
+    @media (max-width: 600px){
+        padding: 20px 20px;
+        h2{
+            @media (max-width: 600px){
+                font-size: 24px;
+    
+            }
+        }
+        form{
+            flex-direction: column;
+            width: 100%;
+            .form__item{
+                width: 280px;
+                &.input-file{
+                    .mask{
+                        .false_button{
+                            left: 10px;
+                            width: 260px;
+                        }
+                    }
+                }
+
+            }
+        }
+
+
+    }
+}

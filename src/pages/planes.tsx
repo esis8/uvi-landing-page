@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image'
 import Head from 'next/head'
+import FormService from '@/components/formService';
 
 export default function Planes() {
 
@@ -55,8 +56,10 @@ export default function Planes() {
 
                 </section>
 
-
+                <FormService />
             </main>
+
+            
         </>
     )
     

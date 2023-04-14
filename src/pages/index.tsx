@@ -8,6 +8,7 @@ import { SetServiceAction, SetPopupServiceAction } from '@/redux/action'
 import { dataService } from '@/data/data'
 import PopupService from '@/components/PopupService';
 import ScrollToTop from '@/components/ScrollToTop';
+import FormService from '@/components/formService';
 
 
 
@@ -91,6 +92,8 @@ const popupService = useSelector((state: RootState)=>state.popupService)
             }
 
         </section>
+
+      <FormService />  
 
       <ScrollToTop/>
 

@@ -1,3 +1,11 @@
+export interface FormData {
+    name: string;
+    lastname: string;
+    email: string;
+    phone: string;
+    attachment?: File | null;
+    plan: string;
+}
 
 export interface SetSelectService{
     type: 'SET_SELECT_SERVICE';
@@ -18,3 +26,4 @@ export interface AppState {
 export type ReducerAction = SetSelectService | SetPopupService;
 
 export type RootState = AppState;
+
