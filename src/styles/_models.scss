@@ -114,47 +114,20 @@ $font-family-general: 'Open Sans', sans-serif;
   width: 10px;
 }
 
-::-webkit-scrollbar-track {
-  background: $color-dark;
-  border-radius: 10px;
-}
-
-body.dark ::-webkit-scrollbar-track{
-    background: $color-popup;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #00000060;
-  border-radius: 10px;
-}
-
-body.dark ::-webkit-scrollbar-thumb {
-    background: #FFFFFF80;
-  }
-
-
-body {
+body{
   scrollbar-width: thin;
-}
-
-body::-webkit-scrollbar {
-  display: none;
-}
-
-body::-webkit-scrollbar-track {
+  &::-webkit-scrollbar-track {
     background: $primary-color;
     border-radius: 10px;
-}
-
-body.dark body::-webkit-scrollbar-track{
+  }
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  &::-webkit-scrollbar-thumb {
     background: $color-dark;
+    border-radius: 10px;
+  }
 }
-
-body::-webkit-scrollbar-thumb {
-  background: $color-dark;
-  border-radius: 10px;
-}
-
 
 /* END SCROLLBAR */
 
