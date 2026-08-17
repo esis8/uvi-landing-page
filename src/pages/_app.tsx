@@ -11,7 +11,7 @@ import Footer from '@/components/Footer'
 
 
 
-export default function App({ Component, pageProps }: AppProps) {
+export default function App({ pageProps }: AppProps) {
 
   const router = useRouter();
   const currentRoute = routes.find((route) => route.path === router.pathname);
