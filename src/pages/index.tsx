@@ -55,8 +55,8 @@ const popupService = useSelector((state: RootState)=>state.popupService)
       <main className='main__home'>
         <div className='portrait'>
           {isMobile ?
-           <Image src='/img/background_3.jpg' alt='background' width={1024} height={1024}/>  : 
-          <Image src='/img/background_1.jpg' alt='background' width={1536} height={512}/> 
+           <Image src='/img/background_3.jpg' alt='background' width={1024} height={1024} loading='eager'/>  :
+          <Image src='/img/background_1.jpg' alt='background' width={1536} height={512} loading='eager'/>
           }
           
           <div className='main__title'>
